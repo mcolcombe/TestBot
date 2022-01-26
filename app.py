@@ -38,15 +38,12 @@ def send_msg(msg):
   print("got here 2")
   url  = 'https://api.groupme.com/v3/bots/post'
   
-  payload ={
-    'text'   : 'hello',
-    'bot_id' : 'e4674e778e9972ea3137611978'
-  }
+  payload = dict(text='hello', bot_id='e4674e778e9972ea3137611978')
   headers = {
     'Content-type': 'application/json',
   }
   print("got here 3")
-  request = requests.post('https://api.groupme.com/v3/bots/post', headers=headers, data=payload)
+  request = requests.post(url, data=payload)
   print(request)
 
 #sends a picture and a message to the chat
