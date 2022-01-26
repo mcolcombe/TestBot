@@ -40,7 +40,7 @@ def send_msg(msg):
   
   payload ={
   'text'   : 'hello',
-  'bot_id' : 'e4674e778e9972ea3137611978',
+  'bot_id' : 'e4674e778e9972ea3137611978'
   }
   print("got here 3")
   request = requests.post('https://api.groupme.com/v3/bots/post', data=payload)
