@@ -43,7 +43,7 @@ def send_msg(msg):
   'bot_id' : 'e4674e778e9972ea3137611978',
   }
         
-  request = requests.post(url=url, data=data)
+  request = requests.post(url, data)
 
 #sends a picture and a message to the chat
 #Picture URL must be registered with GroupMe first
