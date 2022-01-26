@@ -24,7 +24,7 @@ def msg_received_from_group():
     send_msg("Hello " +  data['name'].lower())
   elif data['text'].lower() == "!dice":
     list1 = [1, 2, 3, 4, 5, 6]
-    choice = string(random.choice(list1))
+    choice = str(random.choice(list1))
     send_msg()
 
   #elif data['text'].lower() == "!testpic":
