@@ -39,7 +39,7 @@ def send_msg(msg):
   
   data ={
   'text'   : msg
-  'bot_id' : os.getenv('GROUPME_BOT_ID'),
+  'bot_id' : 'e4674e778e9972ea3137611978',
   }
         
   request = requests.post(url=url, data=data)
