@@ -5,7 +5,7 @@ import json
 import random
 import requests
 import time
-import Flask
+import flask
 #from flask import Flask, request
 
 #define our flask app
