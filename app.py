@@ -5,8 +5,7 @@ import json
 import random
 import requests
 import time
-import flask
-#from flask import Flask, request
+from flask import Flask, request
 
 #define our flask app
 app = Flask(__name__)
