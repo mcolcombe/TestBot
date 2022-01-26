@@ -19,7 +19,9 @@ def msg_received_from_group():
   log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
+  print("got here 1")
   if data['text'].lower() == "!yah_boy":
+    print("sending message")
     send_msg("Time to sleep on this side of the bed!")
 	
 
