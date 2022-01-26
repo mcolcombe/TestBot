@@ -20,16 +20,6 @@ def msg_received_from_group():
   #Check the text of the message sent to the chat to see if it matches our command word
   if data['text'].lower() == "!test":
     send_msg("Hello")
-  elif data['text'].lower() == "!name":
-    send_msg("Hello " +  data['name'].lower())
-  elif data['text'].lower() == "!dice":
-    list1 = [1, 2, 3, 4, 5, 6]
-    choice = str(random.choice(list1))
-    send_msg(choice)
-
-  #elif data['text'].lower() == "!testpic":
-  #  send_msg_pic("Hello World!","https://i.groupme.com/1024x1024.jpeg.d733d6de5c36462f8d1cb67e3191b618")
-	
 	
 
   return "ok", 200
@@ -40,27 +30,6 @@ def send_msg(msg):
   url  = 'https://api.groupme.com/v3/bots/post'
   payload = { 'text' : msg, 'bot_id' : 'e4674e778e9972ea3137611978'}
   r = requests.post(url, data=json.dumps(payload))
-
-#sends a picture and a message to the chat
-#Picture URL must be registered with GroupMe first
-#def send_msg_pic(msg, picURL):
-
- # url  = 'https://api.groupme.com/v3/bots/post'
-
-  #data ={
-  #'bot_id' : os.getenv('GROUPME_BOT_ID'),
-  #'text'   : msg,
-  #"attachments" : [
-  #  {
-  #    "type"  : "image",
-  #    "url"   : picURL
-  #  }
-  #],
-  #'picture_url': picURL
-  #}
-
-  #request = requests.post(url=url, data=data)
-
 
 #logging function to help debug
 def log(msg):
