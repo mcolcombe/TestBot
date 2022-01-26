@@ -35,7 +35,7 @@ def msg_received_from_group():
  
 #Sends a message to the chat that the bot originates from
 def send_msg(msg):
-
+  print("got here 2")
   url  = 'https://api.groupme.com/v3/bots/post'
   
   data ={
