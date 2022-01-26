@@ -18,11 +18,8 @@ def msg_received_from_group():
   log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
-  print("got here 1")
-  print(data)
-  if data['text'].lower() == "!yah_boy":
-    print("sending message")
-    send_msg("Time to sleep on this side of the bed!")
+  if data['text'].lower() == "!test":
+    send_msg("Hello world")
 	
 
   #elif data['text'].lower() == "!testpic":
@@ -35,10 +32,8 @@ def msg_received_from_group():
  
 #Sends a message to the chat that the bot originates from
 def send_msg(msg):
-  print("got here 2")
   url  = 'https://api.groupme.com/v3/bots/post'
-  
-  payload = { 'text' : 'hello', 'bot_id' : 'e4674e778e9972ea3137611978'}
+  payload = { 'text' : msg, 'bot_id' : 'e4674e778e9972ea3137611978'}
   r = requests.post(url, data=json.dumps(payload))
 
 #sends a picture and a message to the chat
