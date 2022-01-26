@@ -45,23 +45,23 @@ def send_msg(msg):
 
 #sends a picture and a message to the chat
 #Picture URL must be registered with GroupMe first
-def send_msg_pic(msg, picURL):
+#def send_msg_pic(msg, picURL):
 
-  url  = 'https://api.groupme.com/v3/bots/post'
+ # url  = 'https://api.groupme.com/v3/bots/post'
 
-  data ={
-  'bot_id' : os.getenv('GROUPME_BOT_ID'),
-  'text'   : msg,
-  "attachments" : [
-    {
-      "type"  : "image",
-      "url"   : picURL
-    }
-  ],
-  'picture_url': picURL
-  }
+  #data ={
+  #'bot_id' : os.getenv('GROUPME_BOT_ID'),
+  #'text'   : msg,
+  #"attachments" : [
+  #  {
+  #    "type"  : "image",
+  #    "url"   : picURL
+  #  }
+  #],
+  #'picture_url': picURL
+  #}
 
-  request = requests.post(url=url, data=data)
+  #request = requests.post(url=url, data=data)
 
 
 #logging function to help debug
