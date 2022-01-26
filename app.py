@@ -19,8 +19,13 @@ def msg_received_from_group():
   
   #Check the text of the message sent to the chat to see if it matches our command word
   if data['text'].lower() == "!test":
-    send_msg("Hello" + data['name'].lower())
-	
+    send_msg("Hello")
+  elif data['text'].lower() == "!name":
+    send_msg("Hello " +  data['name'].lower())
+  elif data['text'].lower() == "!dice":
+    list1 = [1, 2, 3, 4, 5, 6]
+    choice = string(random.choice(list1))
+    send_msg()
 
   #elif data['text'].lower() == "!testpic":
   #  send_msg_pic("Hello World!","https://i.groupme.com/1024x1024.jpeg.d733d6de5c36462f8d1cb67e3191b618")
