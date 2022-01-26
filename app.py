@@ -19,6 +19,7 @@ def msg_received_from_group():
   
   #Check the text of the message sent to the chat to see if it matches our command word
   print("got here 1")
+  print(data)
   if data['text'].lower() == "!yah_boy":
     print("sending message")
     send_msg("Time to sleep on this side of the bed!")
@@ -37,12 +38,12 @@ def send_msg(msg):
   print("got here 2")
   url  = 'https://api.groupme.com/v3/bots/post'
   
-  data ={
+  payload ={
   'text'   : 'hello',
   'bot_id' : 'e4674e778e9972ea3137611978',
   }
         
-  request = requests.post(url, data)
+  request = requests.post('https://api.groupme.com/v3/bots/post', data=payload)
 
 #sends a picture and a message to the chat
 #Picture URL must be registered with GroupMe first
