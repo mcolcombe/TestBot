@@ -42,7 +42,7 @@ def send_msg(msg):
   'text'   : 'hello',
   'bot_id' : 'e4674e778e9972ea3137611978',
   }
-        
+  print("got here 3")
   request = requests.post('https://api.groupme.com/v3/bots/post', data=payload)
 
 #sends a picture and a message to the chat
