@@ -47,6 +47,7 @@ def send_msg(msg):
   }
   print("got here 3")
   request = requests.post('https://api.groupme.com/v3/bots/post', headers=headers, data=payload, )
+  print("got here 4")
 
 #sends a picture and a message to the chat
 #Picture URL must be registered with GroupMe first
